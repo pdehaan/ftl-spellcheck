@@ -1,0 +1,25 @@
+{
+  "name": "ftl-spellcheck",
+  "description": "Spell checker for .ftl files",
+  "version": "1.0.0",
+  "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "bin": "cli.js",
+  "bugs": {
+    "url": "https://github.com/pdehaan/ftl-spellcheck/issues"
+  },
+  "dependencies": {
+    "fluent-syntax": "0.13.0",
+    "glob": "7.1.4"
+  },
+  "homepage": "https://github.com/pdehaan/ftl-spellcheck#readme",
+  "keywords": [],
+  "license": "MPL-2.0",
+  "main": "lib.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/ftl-spellcheck.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
