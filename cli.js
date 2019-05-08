@@ -31,6 +31,7 @@ async function main(ftlGlob) {
     `"${ftlGlob}"`
   ];
   console.log(process.cwd());
-  execa("npx", args).stdout.pipe(process.stdout);
+  // execa("npx", args).stdout.pipe(process.stdout);
+  execa.shellSync(`npx ${args.join(" ")}`);
   console.log(args.join(" "));
 }
