@@ -33,10 +33,9 @@ async function main(ftlGlob) {
   const cmd = `npx ${args.join(" ")}`;
   const res = await execa.shell(cmd);
   console.log(cmd);
-  console.log(res);
   if (res.stderr) {
     console.error(stderr);
-    process.exit(1);
+    process.exit(res.code);
   }
   console.log(res.stdout);
 }
