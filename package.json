@@ -8,6 +8,7 @@
     "url": "https://github.com/pdehaan/ftl-spellcheck/issues"
   },
   "dependencies": {
+    "execa": "1.0.0",
     "fluent-syntax": "0.13.0",
     "glob": "7.1.4"
   },
