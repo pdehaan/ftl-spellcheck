@@ -21,7 +21,7 @@ main(...argv);
 async function main(ftlGlob) {
   const output = lib.createSpellingFile(ftlGlob);
   fs.writeFileSync(".spelling", output);
-  execa("npx", [
+  const args = [
     "markdown-spellcheck",
     "--en-us",
     "--ignore-acronyms",
@@ -29,5 +29,8 @@ async function main(ftlGlob) {
     "--no-suggestions",
     "--report",
     `"${ftlGlob}"`
-  ]).stdout.pipe(process.stdout);
+  ];
+  console.log(process.cwd());
+  execa("npx", args).stdout.pipe(process.stdout);
+  console.log(args.join(" "));
 }
