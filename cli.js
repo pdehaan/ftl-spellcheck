@@ -30,10 +30,13 @@ async function main(ftlGlob) {
     "--report",
     `"${ftlGlob}"`
   ];
-  console.log(process.cwd());
-  // execa("npx", args).stdout.pipe(process.stdout);
-  const {stdout, stderr} = await execa.shell(`npx ${args.join(" ")}`);
-  console.log(args.join(" "));
-  console.log(stdout);
-  console.log(stderr);
+  const cmd = `npx ${args.join(" ")}`;
+  const res = await execa.shell(cmd);
+  console.log(cmd);
+  console.log(res);
+  if (res.stderr) {
+    console.error(stderr);
+    process.exit(1);
+  }
+  console.log(res.stdout);
 }
