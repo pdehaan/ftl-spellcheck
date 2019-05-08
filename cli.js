@@ -17,4 +17,5 @@ main(...argv);
 function main(ftlGlob) {
   const output = lib.createSpellingFile(ftlGlob);
   console.log(output);
+  console.info(`npx markdown-spellcheck -a -n -x --en-us '${ftlGlob}' -r`);
 }
